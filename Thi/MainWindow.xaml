@@ -1,0 +1,40 @@
+﻿<Window x:Class="Thi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="30" Margin="266,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="381"
+                 Text="{Binding SelectedItem.MaBn, ElementName=dataList, Mode=OneWay}"/>
+        <Label Content="Mã bệnh nhân" HorizontalAlignment="Left" Height="30" Margin="71,25,0,0" VerticalAlignment="Top" Width="169"/>
+        <TextBox
+            Text="{Binding SelectedItem.MaBn, ElementName=dataList, Mode=OneWay}"
+            x:Name="txtMaBn" HorizontalAlignment="Left" Height="30" Margin="266,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="381"/>
+        <Label Content="Mã bệnh nhân" HorizontalAlignment="Left" Height="30" Margin="71,25,0,0" VerticalAlignment="Top" Width="169"/>
+        <Label Content="Mã bệnh nhân" HorizontalAlignment="Left" Height="30" Margin="71,152,0,0" VerticalAlignment="Top" Width="169"/>
+        <TextBox
+            Text="{Binding SelectedItem.SoNgayNamVien, ElementName=dataList, Mode=OneWay}"
+            x:Name="txtSNNV" HorizontalAlignment="Left" Height="30" Margin="266,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="381"/>
+        <Label Content="Số ngày&#xD;&#xA;" HorizontalAlignment="Left" Height="30" Margin="71,97,0,0" VerticalAlignment="Top" Width="169"/>
+        <TextBox 
+            Text="{Binding SelectedItem.HoTen, ElementName=dataList, Mode=OneWay}"
+            x:Name="txtTenBn" HorizontalAlignment="Left" Height="30" Margin="266,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="381"/>
+        <Label Content="Tên" HorizontalAlignment="Left" Height="30" Margin="71,62,0,0" VerticalAlignment="Top" Width="169"/>
+        <ComboBox x:Name="cbKhoaKham"  HorizontalAlignment="Left" Height="31" Margin="266,152,0,0" VerticalAlignment="Top" Width="381"/>
+        <DataGrid x:Name="dataList" AutoGenerateColumns="False" Margin="86,234,61,48" SelectionChanged="dataList_SelectionChanged" >
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Mã bệnh nhân" Binding="{Binding MaBn}" Width="130"/>
+                <DataGridTextColumn Header="Họ Tên" Binding="{Binding HoTen}" Width="130"/>
+                <DataGridTextColumn Header="Mã khoa" Binding="{Binding MaKhoa}" Width="130"/>
+                <DataGridTextColumn Header="Số ngày nằm viện" Binding="{Binding SoNgayNamVien}"  Width="130"/>
+                <DataGridTextColumn Header="Viện phí" Binding="{Binding VienPhi}" Width="130"/>
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Thêm" HorizontalAlignment="Left" Height="19" Margin="124,405,0,0" VerticalAlignment="Top" Width="116" Click="Button_Click"/>
+    </Grid>
+</Window>
