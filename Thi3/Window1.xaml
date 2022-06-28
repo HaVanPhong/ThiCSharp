@@ -1,0 +1,24 @@
+﻿<Window x:Class="Thi3.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Thi3"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" x:Name="dataList2" Width="600" Margin="100,180,100,95" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Mã sản phẩm" Width="100" Binding="{Binding MaSp}" />
+                <DataGridTextColumn Header="Tên sản phẩm" Width="100"  Binding="{Binding TenSanPham}" />
+                <DataGridTextColumn Header="Đơn giá" Width="100" Binding="{Binding DonGia}" />
+                <DataGridTextColumn Header="Số lượng bán" Width="100" Binding="{Binding SoLuongBan}"/>
+                <DataGridTextColumn Header="Nhóm hàng" Width="100" Binding="{Binding TenNhomHang}" />
+                <DataGridTextColumn Header="Tiền bán" Width="100" Binding="{Binding TienBan}" />
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+    </Grid>
+</Window>
